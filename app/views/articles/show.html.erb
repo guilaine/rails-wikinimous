@@ -1,0 +1,19 @@
+<div class="container">
+ <div class="row">
+   <div class="col-sm-8 col-sm-offset-2">
+   <div id="conteneur">
+     <h2 class="titre"><%= @article.title %></h2>
+     <div class="lien">
+       <%= link_to edit_article_path(@article) do %>
+       <i class="fa fa-pencil fa-2x" aria-hidden="true"></i>
+       <% end %>
+       <%= link_to article_path(@article),method: :delete,
+       data: { confirm: "Are you sure?" } do %>
+       <i class="fa fa-trash-o fa-2x" aria-hidden="true"></i>
+       <% end %>
+       </div>
+       </div>
+     <p><%= @article.content %></p>
+   </div>
+ </div>
+</div>

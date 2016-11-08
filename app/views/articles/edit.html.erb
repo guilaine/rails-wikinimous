@@ -1,0 +1,18 @@
+<div class="container">
+ <div class="row">
+   <div class="col-sm-8 col-sm-offset-2">
+     <%= form_for @article do |f| %>
+     <h1>Edit article</h1>
+     <div class="form-group">
+       <%= f.label :title %>
+       <%= f.text_field :title, class: 'form-control' %>
+     </div>
+     <div class="form-group">
+     <%= f.label :content %>
+     <%= f.text_area :content, class: 'form-control', rows: '10' %>
+     </div>
+     <%= f.submit 'Update article', class: 'btn btn-primary' %>
+     <% end %>
+   </div>
+ </div>
+</div>
