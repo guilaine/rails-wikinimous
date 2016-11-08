@@ -18,8 +18,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(permission)
-    @article.save
+    @article = Article.create(permission)
     redirect_to articles_path
   end
 

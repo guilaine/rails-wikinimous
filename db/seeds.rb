@@ -7,9 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 10.times do
-  article = Article.new(
+  article = Article.create!(
     title: Faker::Name.title,
     content: Faker::Lorem.paragraph
     )
-  article = article.save
 end
